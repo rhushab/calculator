@@ -3,6 +3,7 @@ let curVal = document.getElementById('curVal');
 let answer = document.getElementById('answer');
 let oper = document.querySelectorAll('.grid-oper');
 let equals = document.getElementById('equals');
+let clear = document.getElementById('clear');
 
 let flag = 0;
 let val1 = '';
@@ -68,4 +69,14 @@ equals.addEventListener('click', () => {
   let m = Math.floor(val2);
   operate(op, l, m);
   console.log(op);
+});
+
+clear.addEventListener('click', () => {
+  flag = 0;
+  op = '';
+  val1 = '';
+  val2 = '';
+  curvalue = '';
+  curVal.innerText = 'The current value is : ' + curvalue;
+  answer.innerText = 'Answer :';
 });
